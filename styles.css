@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    margin: 50px auto;
+    width: 80%;
+}
+
+h1 {
+    color: #ff69b4;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover img {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: red;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .heart {
+    opacity: 1;
+}
+
+audio {
+    display: none;
+}
